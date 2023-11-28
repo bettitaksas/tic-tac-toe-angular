@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './square.component.scss'
 })
 export class SquareComponent {
-  //random = Math.random();
-  random = 0;
-
-  constructor() {
-    setInterval(() => this.random = Math.random(), 1000)
-  }
+  @Input() value: 'X' | 'O' = 'X';
 }
